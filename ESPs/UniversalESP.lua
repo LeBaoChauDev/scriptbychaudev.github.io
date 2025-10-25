@@ -1,3 +1,4 @@
+warn("Our 2HUB Team will not support 2HUB Steal A Brainrot anymore. Please note that using our script is 100% sketchy and not recommended for use ha.")
 _G.FriendColor = Color3.fromRGB(0, 0, 255)
 _G.EnemyColor = Color3.fromRGB(255, 0, 0)
 _G.UseTeamColor = true
