@@ -33,7 +33,7 @@ local TwoHUB_Main = Rayfield:CreateWindow({
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
 
-   KeySystem = true, 
+   KeySystem = false, 
    KeySettings = {
       Title = "2HUB Bảo Vệ Script🇻🇳",
       Subtitle = "2HUB Standalone Grow A Garden🇻🇳",
@@ -46,7 +46,8 @@ local TwoHUB_Main = Rayfield:CreateWindow({
 })
 
 -- No icon because: We unsure if Latte will detect this.
-local TwoHUB_Home = TwoHUB_Main:CreateTab("Trang Chủ", "home") -- home icon. 
+local TwoHUB_Home = TwoHUB_Main:CreateTab("Trang Chủ", "home") -- home icon.
+local TwoHUB_FixLag = TwoHUB_Main:CreateTab("Fix Lag", "wrench") 
 local TwoHUB_OtherScripts = TwoHUB_Main:CreateTab("Script Khác", "command") --command icon
 local TwoHUB_About = TwoHUB_Main:CreateTab("Thông Tin", "info")
 
@@ -111,7 +112,7 @@ local Toggle_Seed_Shop = TwoHUB_Home:CreateToggle({
    end,
 })
 
-local Button_Ultra_Fix_Lag = TwoHUB_Home:CreateButton({
+local Button_Ultra_Fix_Lag = TwoHUB_FixLag:CreateButton({
    Name = "Fix Lag Mạnh (CẢNH BÁO: FIX LAG XÓA TẤT CẢ MỌI THỨ!)",
    Callback = function()
       
@@ -124,7 +125,7 @@ end
    end,
 })
 
-local Button_Add_Lock_Part = TwoHUB_Home:CreateButton({
+local Button_Add_Lock_Part = TwoHUB_FixLag:CreateButton({
    Name = "Thêm Khối Dựa (THÊM TRƯỚC KHI FIX LAG!)",
    Callback = function()
 local Part_Lock = Instance.new("Part", game.Workspace)
