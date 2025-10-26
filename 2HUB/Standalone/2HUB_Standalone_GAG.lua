@@ -2,16 +2,14 @@ local Local_Player = game.Players.LocalPlayer
 local Local_Player_Character = Local_Player.Character or Local_Player.CharacterAdded:Wait()
 local Local_Player_Humanoid = Local_Player_Character.Humanoid
 
-
-
 -- UI Lib
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 -- UI
 local TwoHUB_Main = Rayfield:CreateWindow({
-   Name = "TwoHUB Standalone Grow A Garden",
+   Name = "2HUB Standalone Grow A Garden",
    Icon = 0, 
-   LoadingTitle = "TwoHUB Standalone",
+   LoadingTitle = "2HUB Standalone",
    LoadingSubtitle = "by its_chaudev",
    ShowText = "Rayfield",
    Theme = "Default", 
@@ -33,22 +31,24 @@ local TwoHUB_Main = Rayfield:CreateWindow({
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
 
-   KeySystem = true, 
+   KeySystem = false, 
    KeySettings = {
-      Title = "TwoHUB Protected Script",
-      Subtitle = "TwoHUB Standalone Grow A Garden",
-      Note = "Go to its_chaudev.github.io/TwoHUB/Grow-A-Garden to get the key.", -- Use this to tell the user how to get a key
-      FileName = "TwoHUB_Standalone_Grow_A_Garden_KeyData", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      Title = "2HUB Protected Script",
+      Subtitle = "2HUB Standalone Grow A Garden",
+      Note = "Go to its_chaudev.github.io/2HUB/Grow-A-Garden to get the key.", -- Use this to tell the user how to get a key
+      FileName = "2HUB_Standalone_Grow_A_Garden_KeyData", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"TwoHUB_Service_#0000_All_Platform"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","keyTwoTwo")
+      Key = {"2HUB_Service_#0000_All_Platform"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","keyTwoTwo")
    }
 })
 
 -- No icon because: We unsure if Latte will detect this.
 local TwoHUB_Home = TwoHUB_Main:CreateTab("Home", "home") -- home icon. 
+local TwoHUB_FixLag = TwoHUB_Main:CreateTab("Fix Lag", "wrench")
 local TwoHUB_OtherScripts = TwoHUB_Main:CreateTab("Other Scripts", "command") --command icon
 local TwoHUB_About = TwoHUB_Main:CreateTab("About", "info")
+
 
 local Slider_Hack_Speed = TwoHUB_Home:CreateSlider({
    Name = "Hack Speed",
@@ -111,7 +111,7 @@ local Toggle_Seed_Shop = TwoHUB_Home:CreateToggle({
    end,
 })
 
-local Button_Ultra_Fix_Lag = TwoHUB_Home:CreateButton({
+local Button_Ultra_Fix_Lag = TwoHUB_FixLag:CreateButton({
    Name = "UTLTRA Fix Lag (CAUTION!)",
    Callback = function()
       
@@ -124,7 +124,7 @@ end
    end,
 })
 
-local Button_Add_Lock_Part = TwoHUB_Home:CreateButton({
+local Button_Add_Lock_Part = TwoHUB_FixLag:CreateButton({
    Name = "Add Lock Part (ADD LOCK BEFORE FIX LAG!)",
    Callback = function()
 local Part_Lock = Instance.new("Part", game.Workspace)
