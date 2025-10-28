@@ -2,8 +2,6 @@ local Local_Player = game.Players.LocalPlayer
 local Local_Player_Character = Local_Player.Character or Local_Player.CharacterAdded:Wait()
 local Local_Player_Humanoid = Local_Player_Character.Humanoid
 
-
-
 -- UI Lib
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
@@ -50,6 +48,14 @@ local TwoHUB_Home = TwoHUB_Main:CreateTab("Trang Chủ", "home") -- home icon.
 local TwoHUB_FixLag = TwoHUB_Main:CreateTab("Fix Lag", "wrench") 
 local TwoHUB_OtherScripts = TwoHUB_Main:CreateTab("Script Khác", "command") --command icon
 local TwoHUB_About = TwoHUB_Main:CreateTab("Thông Tin", "info")
+
+
+Rayfield:Notify({
+   Title = "2HUB Cảnh Báo",
+   Content = "Đội Ngũ chúng tôi (2HUB) đã dừng hoạt động dự án này. Hãy dùng script khác hoặc chơi game khác để có niềm vui hơn.",
+   Duration = 6.5,
+   Image = "triangle-alert",
+})
 
 local Slider_Hack_Speed = TwoHUB_Home:CreateSlider({
    Name = "Hack Tốc Độ",
