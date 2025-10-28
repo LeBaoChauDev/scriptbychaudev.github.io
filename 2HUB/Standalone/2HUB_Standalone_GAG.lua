@@ -49,6 +49,13 @@ local TwoHUB_FixLag = TwoHUB_Main:CreateTab("Fix Lag", "wrench")
 local TwoHUB_OtherScripts = TwoHUB_Main:CreateTab("Other Scripts", "command") --command icon
 local TwoHUB_About = TwoHUB_Main:CreateTab("About", "info")
 
+Rayfield:Notify({
+   Title = "2HUB Warning",
+   Content = "Our teams stopped working on this project because this Game is dead. Use other hub or switch other game to have fun",
+   Duration = 6.5,
+   Image = "triangle-alert",
+})
+
 
 local Slider_Hack_Speed = TwoHUB_Home:CreateSlider({
    Name = "Hack Speed",
